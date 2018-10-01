@@ -47,13 +47,19 @@ export default class Wrapper extends React.Component {
         }
     }
 
+    componentDidUpdate(prevProps) {
+        if (this.props.location !== prevProps.location) {
+            window.scrollTo(0, 0)
+        }
+    }
+
     render() {
     
         return (
 
             <div>
                 <Header lang={this.state.lang} toggleLang={this.toggleLang} navbarClass={this.state.navbarClass}/>
-                <BrowserRouter onUpdate={() => window.scrollTo(0,0)}>
+                <BrowserRouter>
                     <div>
                         <Route path="/" render={() => <Home lang={this.state.lang} toggleNavbarClass={this.toggleNavbarClass} />} exact={true} />
                         <Route path="/about-me" render={() => <MeetMe lang={this.state.lang} toggleNavbarClass={this.toggleNavbarClass} />} exact={true} />

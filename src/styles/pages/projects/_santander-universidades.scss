@@ -3,8 +3,6 @@
     .project-introduction {
 
         .my-container {
-            padding-left: 20%;
-            padding-right: 20%;
             background-color: $santander-red !important;
         }
 
@@ -19,11 +17,17 @@
                 }                
             }
             img {
-                width: 350px;
+                width: 180px;
                 height: 150px;
                 margin-top: 20px;
                 margin-bottom: 20px;
                 margin-right: 10px;
+            }    
+            h1 {
+                font-size: 24px;
+            }              
+            p {
+                font-size: 18px;
             }
         }
 

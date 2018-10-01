@@ -1,0 +1,65 @@
+.contact {
+    
+    .my-container {
+    }
+
+    .contact-con {
+        margin-bottom: 20px;
+        margin-top: 20px;
+    }
+
+    .introduction {
+        background-color: $mid-purple;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        text-align: justify;
+        color: #fff;
+
+        :first-child { 
+            margin-left: 10px;
+            width: 25%;
+        }
+
+        :last-child { 
+            width: 75%;
+        }
+
+        span {
+            svg {
+                margin-right: 10px;
+                margin-bottom: 5px;
+            }
+        }
+
+        &.purple {
+            background-color: $purple;
+            a {
+                color: $orange;
+            }
+        }
+
+        &.white {
+            background-color: #fff;
+            color: #000;
+            a {
+                color: $purple;
+                font-weight: 800;
+            }
+        }
+
+        &.mid-orange {
+            background-color: $soft-orange;
+            color: $mid-purple;
+            font-weight: 800;
+        }
+
+        &.orange {
+            background-color: $orange;
+            color: $dark-purple;
+            font-weight: 800;
+        }
+
+    }
+
+}

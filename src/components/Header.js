@@ -101,7 +101,7 @@ Header.defaultProps = {
         },
         {
             text: 'Contact',
-            link: '',
+            link: '/contact',
             type: 'link'
         },
         {
@@ -123,7 +123,7 @@ Header.defaultProps = {
         },
         {
             text: 'Contacto',
-            link: '',
+            link: '/contact',
             type: 'link'
         },
         {

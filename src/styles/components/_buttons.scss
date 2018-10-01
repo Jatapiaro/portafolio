@@ -1,0 +1,44 @@
+.btn {
+    cursor: pointer;
+}
+
+.btn-round {
+    border: none;
+    border-radius: 17px;
+}
+
+.btn-santander-red {
+    background-color: white;
+    color: $santander-red;
+    &:hover {
+        background-color: $santander-grey;
+        color: white;
+    }
+}
+
+.btn-math-3d {
+    background-color: white;
+    color: $santander-red;
+    &:hover {
+        background-color: black;
+        color: white;
+    }
+}
+
+.btn-exam-adapt {
+    background-color: white;
+    color: $exam-adapt-color;
+    &:hover {
+        background-color: $exam-adapt-color;
+        color: white;
+    }
+}
+
+.btn-geriatron {
+    background-color: $exam-adapt-color;
+    color: white;
+    &:hover {
+        background-color: white;
+        color: $exam-adapt-color;
+    }
+}

@@ -43,12 +43,18 @@ export default class Home extends React.Component {
                 <div className="projects">
                     {
                         this.state.data.importantProjectsCards.map((card, index) => 
-                            <Card body inverse style={{ backgroundColor: '#333', borderColor: '#333' }}>
-                                <CardImg top width="100%" src={card.image} alt="Card image cap" />
+                            <Card className={card.class} body inverse>
+                                <center>
+                                    <CardImg top width="100%" src={card.image} alt="Card image cap" />
+                                </center>
                                 <CardBody>
                                     <CardTitle>{card.title}</CardTitle>
-                                    <CardText>With supporting text below as a natural lead-in to additional content.</CardText>
-                                    <Button>Button</Button>
+                                    <CardText>{card.description}</CardText>
+                                    <center>
+                                        <Button className={ "btn-round " + card.buttonClass }>
+                                            {card.button}
+                                        </Button>
+                                    </center>
                                 </CardBody>
                             </Card>
                         )
@@ -71,32 +77,36 @@ Home.defaultProps = {
         importantProjects: 'Important Projects',
         importantProjectsCards: [
             {
-                title: 'Special Title Treatment 1',
+                title: 'Santander Universidades',
                 image: require('./../assets/pages/home/santander-universidades.png'),
-                description: 'With supporting text below as a natural lead-in to additional content.',
-                button: 'Learn More',
-                class: 'santander-red-card'
+                description: 'Development of the new Santander Universidades Mexico site.',
+                button: 'Learn About Santander Universidades',
+                class: 'santander-red-card',
+                buttonClass: 'btn-santander-red'
             },
             {
-                title: 'Special Title Treatment 2',
-                image: 'https://placeholdit.imgix.net/~text?txtsize=33&txt=318%C3%97180&w=318&h=180',
-                description: 'With supporting text below as a natural lead-in to additional content.',
-                button: 'Learn More',
-                class: 'santander-red-card'
+                title: 'Math-3D',
+                image: require('./../assets/pages/home/math-3d.jpg'),
+                description: 'Collaborator in a AR app for a Math book.',
+                button: 'Learn About Math-3D',
+                class: 'math-3d-card',
+                buttonClass: 'btn-math-3d'
             },
             {
-                title: 'Special Title Treatment 3',
-                image: 'https://placeholdit.imgix.net/~text?txtsize=33&txt=318%C3%97180&w=318&h=180',
-                description: 'With supporting text below as a natural lead-in to additional content.',
-                button: 'Learn More',
-                class: 'santander-red-card'
+                title: 'ExamAdapt',
+                image: require('./../assets/pages/home/exam-adapt.jpg'),
+                description: 'A new way to apply exams. Each question is a node, and each vertex an answer.',
+                button: 'Learn About ExamAdapt',
+                buttonClass: 'btn-exam-adapt',
+                class: 'exam-adapt-card'
             },
             {
-                title: 'Special Title Treatment 4',
-                image: 'https://placeholdit.imgix.net/~text?txtsize=33&txt=318%C3%97180&w=318&h=180',
-                description: 'With supporting text below as a natural lead-in to additional content.',
-                button: 'Learn More',
-                class: 'santander-red-card'
+                title: 'Geriatron',
+                image: require('./../assets/pages/home/geriatron.jpg'),
+                description: 'A webapp to support geriatricians with their patients test.',
+                button: 'Learn About Geriatron',
+                buttonClass: 'btn-geriatron',
+                class: 'geriatron-card'
             }
         ]
     }, 
@@ -110,32 +120,36 @@ Home.defaultProps = {
         importantProjects: 'Proyectos Importantes',
         importantProjectsCards: [
             {
-                title: 'Titulo de trat especial',
-                image: 'https://placeholdit.imgix.net/~text?txtsize=33&txt=318%C3%97180&w=318&h=180',
-                description: 'With supporting text below as a natural lead-in to additional content.',
-                button: 'Learn More',
+                title: 'Santander Universidades',
+                image: require('./../assets/pages/home/santander-universidades.png'),
+                description: 'Desarrollo del nuevo sitio de Santander Universidades México.',
+                button: 'Descubré Santander Universidades',
+                buttonClass: 'btn-santander-red',
                 class: 'santander-red-card'
             },
             {
-                title: 'Titulo de trat especial',
-                image: 'https://placeholdit.imgix.net/~text?txtsize=33&txt=318%C3%97180&w=318&h=180',
-                description: 'With supporting text below as a natural lead-in to additional content.',
-                button: 'Learn More',
-                class: 'santander-red-card'
+                title: 'Math-3D',
+                image: require('./../assets/pages/home/math-3d.jpg'),
+                description: 'Colaborador en una app de RA para un libro de matemáticas.',
+                button: 'Descubré Math-3D',
+                buttonClass: 'btn-math-3d',
+                class: 'math-3d-card'
             },
             {
-                title: 'Titulo de trat especial',
-                image: 'https://placeholdit.imgix.net/~text?txtsize=33&txt=318%C3%97180&w=318&h=180',
-                description: 'With supporting text below as a natural lead-in to additional content.',
-                button: 'Learn More',
-                class: 'santander-red-card'
+                title: 'ExamAdapt',
+                image: require('./../assets/pages/home/exam-adapt.jpg'),
+                description: 'Una nueva forma de aplicar examenes. Cada pregunta es un nodo y cada respuesta un vertice.',
+                button: 'Descubré ExamAdapt',
+                buttonClass: 'btn-exam-adapt',
+                class: 'exam-adapt-card'
             },
             {
-                title: 'Titulo de trat especial',
-                image: 'https://placeholdit.imgix.net/~text?txtsize=33&txt=318%C3%97180&w=318&h=180',
-                description: 'With supporting text below as a natural lead-in to additional content.',
-                button: 'Conoce Más',
-                class: 'santander-red-card'
+                title: 'Geriatron',
+                image: require('./../assets/pages/home/geriatron.jpg'),
+                description: 'Una aplicación web para ayudar a los geriatras en la aplicación de pruebas a sus pacientes.',
+                button: 'Learn About Geriatron',
+                buttonClass: 'btn-geriatron',
+                class: 'geriatron-card'
             }
         ]
     }

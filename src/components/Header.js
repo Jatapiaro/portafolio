@@ -91,7 +91,7 @@ Header.defaultProps = {
     en: [
         {
             text: 'About Me',
-            link: '',
+            link: '/about-me',
             type: 'link'
         },
         {
@@ -113,7 +113,7 @@ Header.defaultProps = {
     es: [
         {
             text: 'Conóceme',
-            link: '',
+            link: '/about-me',
             type: 'link'
         },
         {

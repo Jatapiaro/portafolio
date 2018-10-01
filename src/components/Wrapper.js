@@ -4,8 +4,10 @@ import { BrowserRouter, Route } from 'react-router-dom';
 
 import Header from './Header';
 import Footer from './Footer';
+
 import Home from './../pages/Home';
 import Contact from './../pages/Contact';
+import MeetMe from './../pages/MeetMe';
 
 export default class Wrapper extends React.Component {
 
@@ -44,6 +46,7 @@ export default class Wrapper extends React.Component {
                 <BrowserRouter>
                     <div>
                         <Route path="/" render={() => <Home lang={this.state.lang} />} exact={true} />
+                        <Route path="/about-me" render={() => <MeetMe lang={this.state.lang} />} exact={true} />
                         <Route path="/contact" render={() => <Contact lang={this.state.lang} />} exact={true} />
                     </div>
                 </BrowserRouter>

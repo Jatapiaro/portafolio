@@ -8,37 +8,37 @@
 }
 
 .btn-santander-red {
-    background-color: white;
+    background-color: #fff;
     color: $santander-red;
     &:hover {
         background-color: $santander-grey;
-        color: white;
+        color: #fff;
     }
 }
 
 .btn-math-3d {
-    background-color: white;
+    background-color: #fff;
     color: $santander-red;
     &:hover {
         background-color: black;
-        color: white;
+        color: #fff;
     }
 }
 
 .btn-exam-adapt {
-    background-color: white;
+    background-color: #fff;
     color: $exam-adapt-color;
     &:hover {
         background-color: $exam-adapt-color;
-        color: white;
+        color: #fff;
     }
 }
 
 .btn-geriatron {
     background-color: $exam-adapt-color;
-    color: white;
+    color: #fff;
     &:hover {
-        background-color: white;
+        background-color: #fff;
         color: $exam-adapt-color;
     }
 }

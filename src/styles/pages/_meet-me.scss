@@ -1,0 +1,63 @@
+.meet-me {
+    
+    color: #fff;
+
+    .my-container {
+        padding-left: 10%;
+        padding-right: 10%;
+        background-color: $mid-purple;
+    }
+
+    .introduction {
+        background-color: $mid-purple;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        text-align: justify;
+        img {
+            height: 150px;
+            width: 150px;
+            border-radius: 50%;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            margin-right: 10px;
+        }
+        span {
+            svg {
+                margin-right: 5px;
+                margin-bottom: 5px;
+            }
+        }
+        a {
+            color: white;
+            &:hover {
+                color: $pink;
+            }
+        }
+        .stack-overflow:hover {
+            color: $orange;         
+        }
+        .google:hover {
+            color: #d62d20;         
+        }
+        .youtube:hover {
+            color: #c3352e;         
+        }
+
+        .bitbucket:hover {
+            color: $bitbucket-color;
+        }
+        .resume:hover {
+            color: $geriatron-color;
+        }
+    }
+
+    .about-me {
+        background-color: #fff;
+        color: #000;
+        text-align: justify;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+}

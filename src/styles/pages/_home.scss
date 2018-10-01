@@ -2,7 +2,7 @@
     .jumbotron {
         background-color: $mid-purple !important;
         border-radius: 0;
-        color: white;
+        color: #fff;
     }
     .projects {
         display: flex;
@@ -32,11 +32,11 @@
             &.exam-adapt-card {
                 background-color: $exam-adapt-color;
                 .card-text {
-                    color: white;
+                    color: #fff;
                     text-align: justify;
                 }
                 .card-title {
-                    color: white;
+                    color: #fff;
                     text-align: center;
                 }                
                 img {

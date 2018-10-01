@@ -53,7 +53,7 @@ export default class Wrapper extends React.Component {
 
             <div>
                 <Header lang={this.state.lang} toggleLang={this.toggleLang} navbarClass={this.state.navbarClass}/>
-                <BrowserRouter>
+                <BrowserRouter onUpdate={() => window.scrollTo(0,0)}>
                     <div>
                         <Route path="/" render={() => <Home lang={this.state.lang} toggleNavbarClass={this.toggleNavbarClass} />} exact={true} />
                         <Route path="/about-me" render={() => <MeetMe lang={this.state.lang} toggleNavbarClass={this.toggleNavbarClass} />} exact={true} />

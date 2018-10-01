@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
 import { Link } from 'react-router-dom';
 import {
     Collapse,
@@ -40,7 +41,7 @@ export default class Header extends React.Component {
         })
 
     }
-
+    
     componentWillReceiveProps(nextProps) {
         const lang = nextProps.lang;
         const data = (lang === "en") ? this.props.en : this.props.es;
@@ -52,7 +53,7 @@ export default class Header extends React.Component {
 
     render() {
         return (
-            <div className="header">
+            <div id="header" className="header">
                 <Navbar className={this.state.navbarClass} expand="md">
                     <NavbarBrand href="/">Jacobo Tapia</NavbarBrand>
                     <NavbarToggler onClick={this.toggle} />

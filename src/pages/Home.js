@@ -31,6 +31,7 @@ export default class Home extends React.Component {
     }
 
     redirectTo = (target) => {
+        window.scrollTo(0,0);
         this.setState({
             target: target,
             redirect: true

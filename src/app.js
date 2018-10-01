@@ -7,5 +7,4 @@ import './styles/styles.scss';
 
 import Wrapper from './components/Wrapper';
 
-
 ReactDOM.render(<Wrapper />, document.getElementById("app"));

@@ -1,7 +1,13 @@
 import React from 'react';
 import { Jumbotron, Card, Button, CardTitle, CardText, CardBody, CardImg } from 'reactstrap';
+import { Redirect } from 'react-router-dom'
 
 export default class Home extends React.Component {
+
+    state = {
+        redirect: false,
+        target: '/'
+    }
 
     constructor(props) {
         super(props);
@@ -23,9 +29,23 @@ export default class Home extends React.Component {
         })
     }
 
+    redirectTo = () => {
+        this.setState({
+            target: '/santander-universidades',
+            redirect: true
+        })
+    }
+
+    renderRedirect = () => {
+        if (this.state.redirect) {
+            return <Redirect to={this.state.target} push/>
+        }
+    }
+
     render() {
         return (
             <div className="home">
+                {this.renderRedirect()}
                 <Jumbotron>
                     <h1 className="display-3">{this.state.data.jumbotron.salutation}</h1>
                     <p className="lead">{this.state.data.jumbotron.description}</p>
@@ -51,9 +71,13 @@ export default class Home extends React.Component {
                                     <CardTitle>{card.title}</CardTitle>
                                     <CardText>{card.description}</CardText>
                                     <center>
-                                        <Button className={ "btn-round " + card.buttonClass }>
+                                        <button 
+                                            type="button"
+                                            className={ "btn-round " + card.buttonClass }
+                                            onClick={this.redirectTo}
+                                        >
                                             {card.button}
-                                        </Button>
+                                        </button>
                                     </center>
                                 </CardBody>
                             </Card>
@@ -82,7 +106,8 @@ Home.defaultProps = {
                 description: 'Development of the new Santander Universidades Mexico site.',
                 button: 'Learn About Santander Universidades',
                 class: 'santander-red-card',
-                buttonClass: 'btn-santander-red'
+                buttonClass: 'btn-santander-red',
+                link: '/santander-universidades',
             },
             {
                 title: 'Math-3D',
@@ -90,7 +115,8 @@ Home.defaultProps = {
                 description: 'Collaborator in a AR app for a Math book.',
                 button: 'Learn About Math-3D',
                 class: 'math-3d-card',
-                buttonClass: 'btn-math-3d'
+                buttonClass: 'btn-math-3d',
+                link: '/santander-universidades',
             },
             {
                 title: 'ExamAdapt',
@@ -98,7 +124,8 @@ Home.defaultProps = {
                 description: 'A new way to apply exams. Each question is a node, and each vertex an answer.',
                 button: 'Learn About ExamAdapt',
                 buttonClass: 'btn-exam-adapt',
-                class: 'exam-adapt-card'
+                class: 'exam-adapt-card',
+                link: '/santander-universidades',
             },
             {
                 title: 'Geriatron',
@@ -106,7 +133,8 @@ Home.defaultProps = {
                 description: 'A webapp to support geriatricians with their patients test.',
                 button: 'Learn About Geriatron',
                 buttonClass: 'btn-geriatron',
-                class: 'geriatron-card'
+                class: 'geriatron-card',
+                link: '/santander-universidades',
             }
         ]
     }, 
@@ -125,7 +153,8 @@ Home.defaultProps = {
                 description: 'Desarrollo del nuevo sitio de Santander Universidades México.',
                 button: 'Descubré Santander Universidades',
                 buttonClass: 'btn-santander-red',
-                class: 'santander-red-card'
+                class: 'santander-red-card',
+                link: '/santander-universidades',
             },
             {
                 title: 'Math-3D',
@@ -133,7 +162,8 @@ Home.defaultProps = {
                 description: 'Colaborador en una app de RA para un libro de matemáticas.',
                 button: 'Descubré Math-3D',
                 buttonClass: 'btn-math-3d',
-                class: 'math-3d-card'
+                class: 'math-3d-card',
+                link: '/santander-universidades',
             },
             {
                 title: 'ExamAdapt',
@@ -141,7 +171,8 @@ Home.defaultProps = {
                 description: 'Una nueva forma de aplicar examenes. Cada pregunta es un nodo y cada respuesta un vertice.',
                 button: 'Descubré ExamAdapt',
                 buttonClass: 'btn-exam-adapt',
-                class: 'exam-adapt-card'
+                class: 'exam-adapt-card',
+                link: '/santander-universidades',
             },
             {
                 title: 'Geriatron',
@@ -149,7 +180,8 @@ Home.defaultProps = {
                 description: 'Una aplicación web para ayudar a los geriatras en la aplicación de pruebas a sus pacientes.',
                 button: 'Desubré Geriatron',
                 buttonClass: 'btn-geriatron',
-                class: 'geriatron-card'
+                class: 'geriatron-card',
+                link: '/santander-universidades',
             }
         ]
     }

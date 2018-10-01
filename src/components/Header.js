@@ -45,7 +45,8 @@ export default class Header extends React.Component {
         const lang = nextProps.lang;
         const data = (lang === "en") ? this.props.en : this.props.es;
         this.setState({
-            data: data
+            data: data,
+            navbarClass: (!nextProps.navbarClass) ? 'custom-navbar' : nextProps.navbarClass
         })
     }
 

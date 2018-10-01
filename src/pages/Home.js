@@ -19,6 +19,7 @@ export default class Home extends React.Component {
         this.setState({
             data: data
         })
+        this.props.toggleNavbarClass('custom-navbar');
     }
 
     componentWillReceiveProps(nextProps) {
@@ -29,9 +30,9 @@ export default class Home extends React.Component {
         })
     }
 
-    redirectTo = () => {
+    redirectTo = (target) => {
         this.setState({
-            target: '/santander-universidades',
+            target: target,
             redirect: true
         })
     }
@@ -74,8 +75,7 @@ export default class Home extends React.Component {
                                         <button 
                                             type="button"
                                             className={ "btn-round " + card.buttonClass }
-                                            onClick={this.redirectTo}
-                                        >
+                                            onClick={() => { this.redirectTo(card.link) }}>
                                             {card.button}
                                         </button>
                                     </center>
@@ -116,7 +116,7 @@ Home.defaultProps = {
                 button: 'Learn About Math-3D',
                 class: 'math-3d-card',
                 buttonClass: 'btn-math-3d',
-                link: '/santander-universidades',
+                link: '/math-3d',
             },
             {
                 title: 'ExamAdapt',

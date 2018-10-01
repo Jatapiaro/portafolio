@@ -1,0 +1,29 @@
+.santander-universidades {
+
+    .project-introduction {
+
+        .my-container {
+            background-color: $santander-red !important;
+        }
+
+        .introduction {
+            background-color: $santander-red;
+            color: #fff;
+            a {
+                color: #fff;
+                text-decoration: underline;
+                &:hover {
+                    color: #000;
+                }                
+            }
+            img {
+                height: 150px;
+                margin-top: 20px;
+                margin-bottom: 20px;
+                margin-right: 10px;
+            }            
+        }
+
+    }
+
+}

@@ -18,6 +18,7 @@ export default class Works extends React.Component {
         this.setState({
             data: data
         })
+        this.props.toggleNavbarClass('custom-navbar');
     }
 
     componentWillReceiveProps(nextProps) {

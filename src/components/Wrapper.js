@@ -54,10 +54,10 @@ export default class Wrapper extends React.Component {
                 <Header lang={this.state.lang} toggleLang={this.toggleLang} navbarClass={this.state.navbarClass}/>
                 <BrowserRouter>
                     <div>
-                        <Route path="/" render={() => <Home lang={this.state.lang} />} exact={true} />
-                        <Route path="/about-me" render={() => <MeetMe lang={this.state.lang} />} exact={true} />
-                        <Route path="/contact" render={() => <Contact lang={this.state.lang} />} exact={true} />
-                        <Route path="/work" render={() => <Works lang={this.state.lang} />} exact={true} />
+                        <Route path="/" render={() => <Home lang={this.state.lang} toggleNavbarClass={this.toggleNavbarClass} />} exact={true} />
+                        <Route path="/about-me" render={() => <MeetMe lang={this.state.lang} toggleNavbarClass={this.toggleNavbarClass} />} exact={true} />
+                        <Route path="/contact" render={() => <Contact lang={this.state.lang} toggleNavbarClass={this.toggleNavbarClass} />} exact={true} />
+                        <Route path="/work" render={() => <Works lang={this.state.lang} toggleNavbarClass={this.toggleNavbarClass} />} exact={true} />
                         <Route path="/santander-universidades" render={() => <SantanderUniversidades lang={this.state.lang} toggleNavbarClass={this.toggleNavbarClass}/>} exact={true} />
                     </div>
                 </BrowserRouter>

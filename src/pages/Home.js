@@ -163,7 +163,7 @@ Home.defaultProps = {
                 button: 'Descubré Math-3D',
                 buttonClass: 'btn-math-3d',
                 class: 'math-3d-card',
-                link: '/santander-universidades',
+                link: '/math-3d',
             },
             {
                 title: 'ExamAdapt',

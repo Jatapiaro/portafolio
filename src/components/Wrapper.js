@@ -11,6 +11,7 @@ import MeetMe from './../pages/MeetMe';
 import Works from './../pages/Works';
 
 import SantanderUniversidades from './../pages/projects/SantanderUniversidades';
+import Math3D from './../pages/projects/Math3D';
 
 export default class Wrapper extends React.Component {
 
@@ -59,6 +60,7 @@ export default class Wrapper extends React.Component {
                         <Route path="/contact" render={() => <Contact lang={this.state.lang} toggleNavbarClass={this.toggleNavbarClass} />} exact={true} />
                         <Route path="/work" render={() => <Works lang={this.state.lang} toggleNavbarClass={this.toggleNavbarClass} />} exact={true} />
                         <Route path="/santander-universidades" render={() => <SantanderUniversidades lang={this.state.lang} toggleNavbarClass={this.toggleNavbarClass}/>} exact={true} />
+                        <Route path="/math-3d" render={() => <Math3D lang={this.state.lang} toggleNavbarClass={this.toggleNavbarClass} />} exact={true} />
                     </div>
                 </BrowserRouter>
                 <Footer />

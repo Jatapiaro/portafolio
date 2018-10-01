@@ -1,0 +1,29 @@
+.math-3d {
+
+    .project-introduction {
+
+        .my-container {
+            background-color: #000 !important;
+        }
+
+        .introduction {
+            background-color: #000;
+            color: #fff;
+            a {
+                color: #fff;
+                text-decoration: underline;
+                &:hover {
+                    color: $santander-red;
+                }                
+            }
+            img {
+                height: 150px;
+                margin-top: 20px;
+                margin-bottom: 20px;
+                margin-right: 10px;
+            }            
+        }
+
+    }
+
+}

@@ -31,9 +31,12 @@ export default class ProyectIntroduction extends React.Component {
                             <h1>{this.state.data.title}</h1>
                             <p>
                                 {this.state.data.introduction}
-                                <a target="_blank" href={this.state.data.link}>
-                                    {this.state.data.linkLabel}
-                                </a>
+                                {
+                                    this.state.data.link && 
+                                    <a target="_blank" href={this.state.data.link}>
+                                        {this.state.data.linkLabel}
+                                    </a>
+                                }
                                 .
                             </p>
                         </div>

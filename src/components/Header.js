@@ -14,7 +14,8 @@ export default class Header extends React.Component {
 
     state = {
         isOpen: false,
-        data: []
+        data: [],
+        navbarClass: 'custom-navbar'
     }
 
     constructor(props) {
@@ -34,8 +35,10 @@ export default class Header extends React.Component {
         const lang = this.props.lang;
         const data = (lang === "en")? this.props.en : this.props.es;
         this.setState({
-            data: data
+            data: data,
+            navbarClass: (!this.props.navbarClass)? 'custom-navbar' : this.props.navbarClass
         })
+
     }
 
     componentWillReceiveProps(nextProps) {
@@ -49,7 +52,7 @@ export default class Header extends React.Component {
     render() {
         return (
             <div className="header">
-                <Navbar className="custom-navbar" expand="md">
+                <Navbar className={this.state.navbarClass} expand="md">
                     <NavbarBrand href="/">Jacobo Tapia</NavbarBrand>
                     <NavbarToggler onClick={this.toggle} />
                     <Collapse isOpen={this.state.isOpen} navbar>
@@ -96,7 +99,7 @@ Header.defaultProps = {
         },
         {
             text: 'Work',
-            link: '',
+            link: '/work',
             type: 'link'
         },
         {
@@ -118,7 +121,7 @@ Header.defaultProps = {
         },
         {
             text: 'Mi Trabajo',
-            link: '',
+            link: '/work',
             type: 'link'
         },
         {

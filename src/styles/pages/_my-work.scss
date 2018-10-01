@@ -1,8 +1,19 @@
-.home {
+.my-work {
     .jumbotron {
         background-color: $mid-purple !important;
         border-radius: 0;
         color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        h1 {
+            font-size: 48px;
+            margin-left: 20px;
+        }
+        p {
+            margin-left: 20px;
+            font-size: 28px;
+        }
     }
     hr {
         display: block;
@@ -55,6 +66,32 @@
             }
             &.geriatron-card {
                 background-color: $geriatron-color;
+                img {
+                    width: 180px;
+                    height: 180px;
+                    border-radius: 50%;
+                }
+            }
+            &.iso-blade-card {
+                background-color: $iso-blade-color;
+                .card-text {
+                    color: $mid-purple;
+                    text-align: justify;
+                    font-weight: 800;
+                }
+                .card-title {
+                    color: $mid-purple;
+                    text-align: center;
+                    font-weight: 800;
+                }  
+                img {
+                    width: 180px;
+                    height: 180px;
+                    border-radius: 50%;
+                }
+            }
+            &.coco-game-card {
+                background-color: $coco-game-color;
                 img {
                     width: 180px;
                     height: 180px;

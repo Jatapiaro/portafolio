@@ -1,7 +1,12 @@
 import React from 'react';
+import {
+    FaBriefcase
+} from 'react-icons/fa';
 import { Jumbotron, Card, Button, CardTitle, CardText, CardBody, CardImg } from 'reactstrap';
 
-export default class Home extends React.Component {
+//https://www.researchgate.net/publication/321813688_CocoGame_A_funny_app_to_learn_physics_and_math
+
+export default class Works extends React.Component {
 
     constructor(props) {
         super(props);
@@ -25,24 +30,28 @@ export default class Home extends React.Component {
 
     render() {
         return (
-            <div className="home">
+            <div className="my-work">
                 <Jumbotron>
-                    <h1 className="display-3">{this.state.data.jumbotron.salutation}</h1>
-                    <p className="lead">{this.state.data.jumbotron.description}</p>
-                    <hr className="my-2" />
-                    <p>{this.state.data.jumbotron.readMore}</p>
-                    <p className="lead">
-                        <Button color="primary">{this.state.data.jumbotron.learnMore}</Button>
-                    </p>
+                    <div>
+                        <FaBriefcase
+                            className="contact-con"
+                            size={"10em"}
+                            color={"#fff"}
+                        />
+                    </div>
+                    <div>
+                        <h1>{this.state.data.jumbotron.salutation}</h1>
+                        <p>{this.state.data.jumbotron.description}</p>
+                    </div>
                 </Jumbotron>
                 <div className="projects-label">
                     <center>
-                        <h1>{this.state.data.importantProjects}</h1>
+                        <h1>{this.state.data.projects}</h1>
                     </center>
                 </div>
                 <div className="projects">
                     {
-                        this.state.data.importantProjectsCards.map((card, index) => 
+                        this.state.data.projectsCards.map((card, index) =>
                             <Card className={card.class} body inverse>
                                 <center>
                                     <CardImg top width="100%" src={card.image} alt="Card image cap" />
@@ -51,7 +60,7 @@ export default class Home extends React.Component {
                                     <CardTitle>{card.title}</CardTitle>
                                     <CardText>{card.description}</CardText>
                                     <center>
-                                        <Button className={ "btn-round " + card.buttonClass }>
+                                        <Button className={"btn-round " + card.buttonClass}>
                                             {card.button}
                                         </Button>
                                     </center>
@@ -66,16 +75,22 @@ export default class Home extends React.Component {
 
 }
 
-Home.defaultProps = {
+Works.defaultProps = {
     en: {
         jumbotron: {
-            salutation: 'Hello world!',
-            description: "I'm Jacobo, your next fullstack developer with knowledge of videogames, AR and a little bit of music technology.",
-            readMore: "I invite you to read more about me...so, just click on the button below.",
-            learnMore: "Learn More About Jacobo"
+            salutation: 'My Work',
+            description: "You can take a look to each of my projects.",
         },
-        importantProjects: 'Important Projects',
-        importantProjectsCards: [
+        projects: 'My Projects',
+        projectsCards: [
+            {
+                title: 'Current Work',
+                image: require('./../assets/pages/works/espora-estudio.gif'),
+                description: 'My current work at Espora Estudio.',
+                button: 'Learn About My Work At Espora',
+                class: 'math-3d-card',
+                buttonClass: 'btn-math-3d'
+            },
             {
                 title: 'Santander Universidades',
                 image: require('./../assets/pages/home/santander-universidades.png'),
@@ -93,12 +108,28 @@ Home.defaultProps = {
                 buttonClass: 'btn-math-3d'
             },
             {
+                title: 'Iso-Blade',
+                image: require('./../assets/pages/works/iso-blade.jpg'),
+                description: 'A 3D project to simulate your airfoils.',
+                button: 'Learn About Iso-Blade',
+                class: 'iso-blade-card',
+                buttonClass: 'btn-iso-blade'
+            },
+            {
                 title: 'ExamAdapt',
                 image: require('./../assets/pages/home/exam-adapt.jpg'),
                 description: 'A new way to apply exams. Each question is a node, and each vertex an answer.',
                 button: 'Learn About ExamAdapt',
                 buttonClass: 'btn-exam-adapt',
                 class: 'exam-adapt-card'
+            },
+            {
+                title: 'Coco Game',
+                image: require('./../assets/pages/works/coco-game.png'),
+                description: 'A funny app to learn physics and math.',
+                button: 'Learn About Coco Game',
+                buttonClass: 'btn-coco-game',
+                class: 'coco-game-card'
             },
             {
                 title: 'Geriatron',
@@ -109,31 +140,45 @@ Home.defaultProps = {
                 class: 'geriatron-card'
             }
         ]
-    }, 
+    },
     es: {
         jumbotron: {
-            salutation: '¡Hola mundo!',
-            description: "Soy Jacobo, tu próximo desarrollador full stack con conocimientos de videojuegos, RA, y un poco de tecnología musical.",
-            readMore: "Te invito a leer más acerca de mí...así que, da click en el botón de abajo.",
-            learnMore: "Conoce Más Sobre Jacobo"
+            salutation: 'Mi Trabajo',
+            description: "Puedes ver cada uno de mis trabajos aquí abajo.",
         },
-        importantProjects: 'Proyectos Importantes',
-        importantProjectsCards: [
+        projects: 'Mis Proyectos',
+        projectsCards: [
+            {
+                title: 'Trabajo Actual',
+                image: require('./../assets/pages/works/espora-estudio.gif'),
+                description: 'Mi trabajo actual en Espora Estudio.',
+                button: 'Descubré mi trabajo en Espora',
+                class: 'math-3d-card',
+                buttonClass: 'btn-math-3d'
+            },
             {
                 title: 'Santander Universidades',
                 image: require('./../assets/pages/home/santander-universidades.png'),
                 description: 'Desarrollo del nuevo sitio de Santander Universidades México.',
                 button: 'Descubré Santander Universidades',
-                buttonClass: 'btn-santander-red',
-                class: 'santander-red-card'
+                class: 'santander-red-card',
+                buttonClass: 'btn-santander-red'
             },
             {
                 title: 'Math-3D',
                 image: require('./../assets/pages/home/math-3d.jpg'),
                 description: 'Colaborador en una app de RA para un libro de matemáticas.',
                 button: 'Descubré Math-3D',
-                buttonClass: 'btn-math-3d',
-                class: 'math-3d-card'
+                class: 'math-3d-card',
+                buttonClass: 'btn-math-3d'
+            },
+            {
+                title: 'Iso-Blade',
+                image: require('./../assets/pages/works/iso-blade.jpg'),
+                description: 'Un simulador en 3D de turbinas.',
+                button: 'Descubré Iso-Blade',
+                class: 'iso-blade-card',
+                buttonClass: 'btn-iso-blade'
             },
             {
                 title: 'ExamAdapt',
@@ -144,10 +189,18 @@ Home.defaultProps = {
                 class: 'exam-adapt-card'
             },
             {
+                title: 'Coco Game',
+                image: require('./../assets/pages/works/coco-game.png'),
+                description: 'Una app divertida para aprender física y matemáticas.',
+                button: 'Descubré Coco Game',
+                buttonClass: 'btn-coco-game',
+                class: 'coco-game-card'
+            },
+            {
                 title: 'Geriatron',
                 image: require('./../assets/pages/home/geriatron.jpg'),
                 description: 'Una aplicación web para ayudar a los geriatras en la aplicación de pruebas a sus pacientes.',
-                button: 'Desubré Geriatron',
+                button: 'Descubré Geriatron',
                 buttonClass: 'btn-geriatron',
                 class: 'geriatron-card'
             }

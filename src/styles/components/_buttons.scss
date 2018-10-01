@@ -42,3 +42,21 @@
         color: $exam-adapt-color;
     }
 }
+
+.btn-iso-blade {
+    background-color: $purple;
+    color: $iso-blade-color;
+    &:hover {
+        color: $purple;
+        background-color: $iso-blade-color;
+    }
+}
+
+.btn-coco-game {
+    background-color: $purple;
+    color: #fff;
+    &:hover {
+        color: $coco-game-color;
+        background-color: #fff;
+    }    
+}

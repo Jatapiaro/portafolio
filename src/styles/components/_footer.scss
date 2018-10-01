@@ -1,0 +1,13 @@
+.my-footer {
+    background-color: $mid-purple;
+    color: $orange;
+
+    hr {
+        display: block;
+        height: 1px;
+        border: 0;
+        border-top: 1px solid $orange;
+        margin: 1em 0;
+        padding: 0; 
+    }
+}

@@ -1,0 +1,23 @@
+.home {
+    .jumbotron {
+        background-color: $mid-purple !important;
+        border-radius: 0;
+        color: white;
+    }
+    .projects {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        background-color: $purple;
+        .card {
+            max-width: 250px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            border-radius: 10%;
+        }        
+    }
+    h1 {
+        font-weight: 800;
+        margin-bottom: 40px;
+    }
+}

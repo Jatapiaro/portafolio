@@ -32,6 +32,15 @@ export default class AboutProject extends React.Component {
                             return (
                                 <img style={{ marginBottom: "20px" }} key={index} src={item.data} className="img-fluid"/>
                             )
+                        } else if ( item.type == 'text-link' ) {
+                            return (
+                                <div>
+                                    <p key={index}>
+                                        {item.data}
+                                        <a target="_blank" href={item.link}>{item.linkLabel}</a>
+                                    </p>
+                                </div>
+                            )
                         } else {
                             return (
                                 <div style={{marginBottom: "20px"}} key={index} className="embed-responsive embed-responsive-16by9">

@@ -14,6 +14,9 @@ import SantanderUniversidades from './../pages/projects/SantanderUniversidades';
 import Math3D from './../pages/projects/Math3D';
 import ExamAdapt from '../pages/projects/ExamAdapt';
 import Geriatron from '../pages/projects/Geriatron';
+import CocoGame from '../pages/projects/CocoGame';
+import IsoBlade from '../pages/projects/IsoBlade';
+import Espora from '../pages/projects/Espora';
 
 export default class Wrapper extends React.Component {
 
@@ -65,6 +68,9 @@ export default class Wrapper extends React.Component {
                         <Route path="/math-3d" render={() => <Math3D lang={this.state.lang} toggleNavbarClass={this.toggleNavbarClass} />} exact={true} />
                         <Route path="/examadapt" render={() => <ExamAdapt lang={this.state.lang} toggleNavbarClass={this.toggleNavbarClass} />} exact={true} />
                         <Route path="/geriatron" render={() => <Geriatron lang={this.state.lang} toggleNavbarClass={this.toggleNavbarClass} />} exact={true} />
+                        <Route path="/coco-game" render={() => <CocoGame lang={this.state.lang} toggleNavbarClass={this.toggleNavbarClass} />} exact={true} />
+                        <Route path="/iso-blade" render={() => <IsoBlade lang={this.state.lang} toggleNavbarClass={this.toggleNavbarClass} />} exact={true} />
+                        <Route path="/espora" render={() => <Espora lang={this.state.lang} toggleNavbarClass={this.toggleNavbarClass} />} exact={true} />
                     </div>
                 </BrowserRouter>
                 <Footer />

@@ -3,10 +3,16 @@ import {
     FaBriefcase
 } from 'react-icons/fa';
 import { Jumbotron, Card, Button, CardTitle, CardText, CardBody, CardImg } from 'reactstrap';
+import { Redirect } from 'react-router-dom'
 
 //https://www.researchgate.net/publication/321813688_CocoGame_A_funny_app_to_learn_physics_and_math
 
 export default class Works extends React.Component {
+
+    state = {
+        redirect: false,
+        target: '/'
+    }
 
     constructor(props) {
         super(props);
@@ -29,9 +35,24 @@ export default class Works extends React.Component {
         })
     }
 
+    redirectTo = (target) => {
+        window.scrollTo(0, 0);
+        this.setState({
+            target: target,
+            redirect: true
+        })
+    }
+
+    renderRedirect = () => {
+        if (this.state.redirect) {
+            return <Redirect to={this.state.target} push />
+        }
+    }
+
     render() {
         return (
             <div className="my-work">
+                {this.renderRedirect()}
                 <Jumbotron>
                     <div>
                         <FaBriefcase
@@ -61,7 +82,7 @@ export default class Works extends React.Component {
                                     <CardTitle>{card.title}</CardTitle>
                                     <CardText>{card.description}</CardText>
                                     <center>
-                                        <Button className={"btn-round " + card.buttonClass}>
+                                        <Button className={"btn-round " + card.buttonClass} onClick={() => { this.redirectTo(card.link) }}>
                                             {card.button}
                                         </Button>
                                     </center>
@@ -90,7 +111,8 @@ Works.defaultProps = {
                 description: 'My current work at Espora Estudio.',
                 button: 'Learn About My Work At Espora',
                 class: 'math-3d-card',
-                buttonClass: 'btn-math-3d'
+                buttonClass: 'btn-math-3d',
+                link: '/espora'
             },
             {
                 title: 'Santander Universidades',
@@ -98,7 +120,8 @@ Works.defaultProps = {
                 description: 'Development of the new Santander Universidades Mexico site.',
                 button: 'Learn About Santander Universidades',
                 class: 'santander-red-card',
-                buttonClass: 'btn-santander-red'
+                buttonClass: 'btn-santander-red',
+                link: '/santander-universidades'
             },
             {
                 title: 'Math-3D',
@@ -106,7 +129,8 @@ Works.defaultProps = {
                 description: 'Collaborator in a AR app for a Math book.',
                 button: 'Learn About Math-3D',
                 class: 'math-3d-card',
-                buttonClass: 'btn-math-3d'
+                buttonClass: 'btn-math-3d',
+                link: '/math-3d'
             },
             {
                 title: 'Iso-Blade',
@@ -114,7 +138,8 @@ Works.defaultProps = {
                 description: 'A 3D project to simulate your airfoils.',
                 button: 'Learn About Iso-Blade',
                 class: 'iso-blade-card',
-                buttonClass: 'btn-iso-blade'
+                buttonClass: 'btn-iso-blade',
+                link: '/iso-blade'
             },
             {
                 title: 'ExamAdapt',
@@ -122,7 +147,8 @@ Works.defaultProps = {
                 description: 'A new way to apply exams. Each question is a node, and each vertex an answer.',
                 button: 'Learn About ExamAdapt',
                 buttonClass: 'btn-exam-adapt',
-                class: 'exam-adapt-card'
+                class: 'exam-adapt-card',
+                link: '/examadapt'
             },
             {
                 title: 'Coco Game',
@@ -130,7 +156,8 @@ Works.defaultProps = {
                 description: 'A funny app to learn physics and math.',
                 button: 'Learn About Coco Game',
                 buttonClass: 'btn-coco-game',
-                class: 'coco-game-card'
+                class: 'coco-game-card',
+                link: '/coco-game'
             },
             {
                 title: 'Geriatron',
@@ -138,7 +165,8 @@ Works.defaultProps = {
                 description: 'A webapp to support geriatricians with their patients test.',
                 button: 'Learn About Geriatron',
                 buttonClass: 'btn-geriatron',
-                class: 'geriatron-card'
+                class: 'geriatron-card',
+                link: '/geriatron'
             }
         ]
     },
@@ -155,7 +183,8 @@ Works.defaultProps = {
                 description: 'Mi trabajo actual en Espora Estudio.',
                 button: 'Descubré mi trabajo en Espora',
                 class: 'math-3d-card',
-                buttonClass: 'btn-math-3d'
+                buttonClass: 'btn-math-3d',
+                link: '/espora'
             },
             {
                 title: 'Santander Universidades',
@@ -163,7 +192,8 @@ Works.defaultProps = {
                 description: 'Desarrollo del nuevo sitio de Santander Universidades México.',
                 button: 'Descubré Santander Universidades',
                 class: 'santander-red-card',
-                buttonClass: 'btn-santander-red'
+                buttonClass: 'btn-santander-red',
+                link: '/santander-universidades'
             },
             {
                 title: 'Math-3D',
@@ -171,7 +201,8 @@ Works.defaultProps = {
                 description: 'Colaborador en una app de RA para un libro de matemáticas.',
                 button: 'Descubré Math-3D',
                 class: 'math-3d-card',
-                buttonClass: 'btn-math-3d'
+                buttonClass: 'btn-math-3d',
+                link: '/math-3d'
             },
             {
                 title: 'Iso-Blade',
@@ -179,7 +210,8 @@ Works.defaultProps = {
                 description: 'Un simulador en 3D de turbinas.',
                 button: 'Descubré Iso-Blade',
                 class: 'iso-blade-card',
-                buttonClass: 'btn-iso-blade'
+                buttonClass: 'btn-iso-blade',
+                link: '/iso-blade'
             },
             {
                 title: 'ExamAdapt',
@@ -187,7 +219,8 @@ Works.defaultProps = {
                 description: 'Una nueva forma de aplicar examenes. Cada pregunta es un nodo y cada respuesta un vertice.',
                 button: 'Descubré ExamAdapt',
                 buttonClass: 'btn-exam-adapt',
-                class: 'exam-adapt-card'
+                class: 'exam-adapt-card',
+                link: '/examadapt'
             },
             {
                 title: 'Coco Game',
@@ -195,7 +228,8 @@ Works.defaultProps = {
                 description: 'Una app divertida para aprender física y matemáticas.',
                 button: 'Descubré Coco Game',
                 buttonClass: 'btn-coco-game',
-                class: 'coco-game-card'
+                class: 'coco-game-card',
+                link: '/coco-game'
             },
             {
                 title: 'Geriatron',
@@ -203,7 +237,8 @@ Works.defaultProps = {
                 description: 'Una aplicación web para ayudar a los geriatras en la aplicación de pruebas a sus pacientes.',
                 button: 'Descubré Geriatron',
                 buttonClass: 'btn-geriatron',
-                class: 'geriatron-card'
+                class: 'geriatron-card',
+                link: '/geriatron'
             }
         ]
     }

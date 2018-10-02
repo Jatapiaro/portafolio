@@ -7,6 +7,16 @@
     border-radius: 17px;
 }
 
+.btn-meet-me {
+    font-weight: 800;
+    background-color: $orange;
+    color: #000;
+    &:hover {
+        background-color: $mid-purple;
+        color: $orange;
+    } 
+}
+
 .btn-santander-red {
     background-color: #fff;
     color: $santander-red;

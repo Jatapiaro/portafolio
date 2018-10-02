@@ -54,7 +54,9 @@ export default class Home extends React.Component {
                     <hr className="my-2" />
                     <p>{this.state.data.jumbotron.readMore}</p>
                     <p className="lead">
-                        <Button color="primary">{this.state.data.jumbotron.learnMore}</Button>
+                        <Button onClick={() => { this.redirectTo('/about-me') }} className="btn btn-round btn-meet-me">
+                            {this.state.data.jumbotron.learnMore}
+                        </Button>
                     </p>
                 </Jumbotron>
                 <div className="projects-label">

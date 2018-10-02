@@ -70,8 +70,8 @@ Math3D.defaultProps = {
         projectIntroduction: {
             title: "Math 3D",
             introduction: "A principios de 2018, colabore en el desarrollo de una aplicación de RA para un libro de matemáticas",
-            link: 'http://santanderuniversidades.com.mx',
             link: undefined,
+            linkLabel: '',
             image: require('./../../assets/pages/home/math-3d.jpg')
         },
         about: [

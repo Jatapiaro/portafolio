@@ -126,7 +126,7 @@ Home.defaultProps = {
                 button: 'Learn About ExamAdapt',
                 buttonClass: 'btn-exam-adapt',
                 class: 'exam-adapt-card',
-                link: '/santander-universidades',
+                link: '/examadapt',
             },
             {
                 title: 'Geriatron',
@@ -173,7 +173,7 @@ Home.defaultProps = {
                 button: 'Descubré ExamAdapt',
                 buttonClass: 'btn-exam-adapt',
                 class: 'exam-adapt-card',
-                link: '/santander-universidades',
+                link: '/examadapt',
             },
             {
                 title: 'Geriatron',

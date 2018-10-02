@@ -30,7 +30,7 @@ export default class AboutProject extends React.Component {
                             )
                         } else if ( item.type == 'image' ) {
                             return (
-                                <img key={index} src={item.data} className="img-fluid"/>
+                                <img style={{ marginBottom: "20px" }} key={index} src={item.data} className="img-fluid"/>
                             )
                         } else {
                             return (

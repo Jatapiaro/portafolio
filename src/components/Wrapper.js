@@ -12,6 +12,7 @@ import Works from './../pages/Works';
 
 import SantanderUniversidades from './../pages/projects/SantanderUniversidades';
 import Math3D from './../pages/projects/Math3D';
+import ExamAdapt from '../pages/projects/ExamAdapt';
 
 export default class Wrapper extends React.Component {
 
@@ -61,6 +62,7 @@ export default class Wrapper extends React.Component {
                         <Route path="/work" render={() => <Works lang={this.state.lang} toggleNavbarClass={this.toggleNavbarClass} />} exact={true} />
                         <Route path="/santander-universidades" render={() => <SantanderUniversidades lang={this.state.lang} toggleNavbarClass={this.toggleNavbarClass}/>} exact={true} />
                         <Route path="/math-3d" render={() => <Math3D lang={this.state.lang} toggleNavbarClass={this.toggleNavbarClass} />} exact={true} />
+                        <Route path="/examadapt" render={() => <ExamAdapt lang={this.state.lang} toggleNavbarClass={this.toggleNavbarClass} />} exact={true} />
                     </div>
                 </BrowserRouter>
                 <Footer />

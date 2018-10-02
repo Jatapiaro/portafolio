@@ -57,8 +57,16 @@ SantanderUniversidades.defaultProps = {
                 data: 'In this project, I was not granted with all the necessary permissions on the server. I just have FTP access. Also they wanted the project in just one week, and they expected that all the code was installed on a server with wordpress. So, taking this in account I developed the whole site with just HTML, CSS and JS. Also I take advantage of some libraries like bootstrap, jquery and handlebars.',
             },
             {
+                type: 'image',
+                data: require('./../../assets/pages/projects/santander-universidades/1.png')
+            },
+            {
                 type: 'text',
                 data: 'Then, an extra module was added outside the main page. This was like a blog for the people in charge of the “News” section of the page. In this other site, the people in charge can create, modify and delete all the news that will appear on the main site.',
+            },
+            {
+                type: 'image',
+                data: require('./../../assets/pages/projects/santander-universidades/2.png')
             },
             {
                 type: 'text',
@@ -88,8 +96,16 @@ SantanderUniversidades.defaultProps = {
                 data: 'En este proyecto tuve restricciones de permisos en el servidor, pues solo me otorgaron acceso por FTP, y todo el código debía ser puesto encima de un proyecto que esperaba ser Wordpress. Así que, inicialmente, realice todo el proyecto sin ningún framework, únicamente se utilizo HTML, CSS y JS. Incluyendo librerías como bootstrap, jquery y handlebars. El proyecto fue desarrollado en tan solo una semana.'
             },
             {
+                type: 'image',
+                data: require('./../../assets/pages/projects/santander-universidades/1.png')
+            },
+            {
                 type: 'text',
                 data: 'Además se añadió un módulo extra, fuera de la página, para que el encargado de las noticias, pudiera administrarlas, desde crearlas, modificarlas y eliminarlas. Cada una de esas noticias, se muestra en la sección “Noticias” del sitio.'
+            },
+            {
+                type: 'image',
+                data: require('./../../assets/pages/projects/santander-universidades/2.png')
             },
             {
                 type: 'text',

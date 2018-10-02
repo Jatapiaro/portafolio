@@ -135,7 +135,7 @@ Home.defaultProps = {
                 button: 'Learn About Geriatron',
                 buttonClass: 'btn-geriatron',
                 class: 'geriatron-card',
-                link: '/santander-universidades',
+                link: '/geriatron',
             }
         ]
     }, 
@@ -182,7 +182,7 @@ Home.defaultProps = {
                 button: 'Desubré Geriatron',
                 buttonClass: 'btn-geriatron',
                 class: 'geriatron-card',
-                link: '/santander-universidades',
+                link: '/geriatron',
             }
         ]
     }

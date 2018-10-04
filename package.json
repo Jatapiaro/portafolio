@@ -30,7 +30,8 @@
   "scripts": {
     "build": "webpack",
     "serve": "webpack-dev-server",
-    "deploy": "webpack && git add src/* public/* && git commit -m \"deploy\" && git push -u origin master && git push heroku master"
+    "deploy": "webpack && git add src/* public/* && git commit -m \"deploy\" && git push -u origin master && git push heroku master",
+    "add-heroku-remote": "heroku git:remote -a jatapiaro-portafolio"
   },
   "devDependencies": {
     "webpack-cli": "^3.1.2"

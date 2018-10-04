@@ -50,7 +50,7 @@ Espora.defaultProps = {
         about: [
             {
                 type: 'text',
-                data: 'Durantante mi tiempo en Espora, he realizado los siguientes proyectos:'
+                data: 'During my time at Espora I\'ve developed the following projects:'
             },
             {
                 type: 'text-link',
@@ -87,7 +87,7 @@ Espora.defaultProps = {
         about: [
             {
                 type: 'text',
-                data: 'Durantante mi tiempo en Espora, he realizado los siguientes proyectos:'
+                data: 'Durante mi tiempo en Espora, he realizado los siguientes proyectos:'
             },
             {
                 type: 'text-link',

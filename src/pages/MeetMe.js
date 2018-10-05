@@ -49,7 +49,7 @@ export default class MeetMe extends React.Component {
                                     <a className="bitbucket" target="_blank" href="https://bitbucket.org/jatapiaro/"><FaBitbucket size={"1.5em"} /></a>
                                     <a className="stack-overflow" target="_blank" href="https://stackoverflow.com/users/9422114/jacobo-tapia"><FaStackOverflow size={"1.5em"} /></a>
                                     <a className="youtube" target="_blank" href="https://www.youtube.com/channel/UCGY6v72JuKEmi2zMWzI8VSg"><FaYoutube size={"1.5em"} /></a>
-                                    <a className="resume" target="_blank" href="https://drive.google.com/file/d/1ZptH5xMvocnrjySG9xkpTVTKlSc5DaQ3/view?usp=sharing"><FaFile size={"1.5em"} /></a>
+                                    <a className="resume" target="_blank" href="https://drive.google.com/file/d/1rRyM7Mev0CQDuzTF20C-HKxd1K8dmDue/view?usp=sharing"><FaFile size={"1.5em"} /></a>
                                     <a className="google" target="_blank" href="http://www.letmegooglethat.com/?q=Jatapiaro"><FaGoogle size={"1.3em"} /></a>
                                 </span>
                             </p>

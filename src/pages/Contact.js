@@ -88,7 +88,7 @@ export default class Contact extends React.Component {
                         </div>
                         <div>
                             <h1>{this.state.data.resume}</h1>
-                            <p>{this.state.data.resumeDescription}<a target="_blank" href="https://drive.google.com/file/d/1rRyM7Mev0CQDuzTF20C-HKxd1K8dmDue/view?usp=sharing">{this.state.data.resumeLink}</a></p>
+                            <p>{this.state.data.resumeDescription}<a target="_blank" href="https://drive.google.com/file/d/1LPiEX3wTdXrbcQt09QviRCzBRZtUumGF/view?usp=sharing">{this.state.data.resumeLink}</a></p>
                         </div>
                     </div>
 

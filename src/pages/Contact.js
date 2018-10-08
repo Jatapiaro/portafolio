@@ -102,7 +102,7 @@ export default class Contact extends React.Component {
                         </div>
                         <div>
                             <h1>{this.state.data.youtube}</h1>
-                            <p>{this.state.data.youtubeDescription}<a target="_blank" href="https://www.youtube.com/channel/UCGY6v72JuKEmi2zMWzI8VSg">{this.state.data.resumeLink}</a></p>
+                            <p>{this.state.data.youtubeDescription}<a target="_blank" href="https://drive.google.com/file/d/154NcnOwPKegqhcOP-n6wJuUhqOWN8cSY/view?usp=sharing">{this.state.data.resumeLink}</a></p>
                         </div>
                     </div>
 

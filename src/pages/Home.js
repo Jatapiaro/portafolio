@@ -1,6 +1,14 @@
 import React from 'react';
 import { Jumbotron, Card, Button, CardTitle, CardText, CardBody, CardImg } from 'reactstrap';
 import { Redirect } from 'react-router-dom'
+import {
+    FaGithub,
+    FaBitbucket,
+    FaFile,
+    FaGoogle,
+    FaStackOverflow,
+    FaYoutube
+} from 'react-icons/fa';
 
 export default class Home extends React.Component {
 
@@ -51,6 +59,12 @@ export default class Home extends React.Component {
                 <Jumbotron>
                     <h1 className="display-3">{this.state.data.jumbotron.salutation}</h1>
                     <p className="lead">{this.state.data.jumbotron.description}</p>
+                    <a className="github" target="_blank" href="https://github.com/Jatapiaro"><FaGithub size={"1.5em"} /></a>
+                    <a className="bitbucket" target="_blank" href="https://bitbucket.org/jatapiaro/"><FaBitbucket size={"1.5em"} /></a>
+                    <a className="stack-overflow" target="_blank" href="https://stackoverflow.com/users/9422114/jacobo-tapia"><FaStackOverflow size={"1.5em"} /></a>
+                    <a className="youtube" target="_blank" href="https://www.youtube.com/channel/UCGY6v72JuKEmi2zMWzI8VSg"><FaYoutube size={"1.5em"} /></a>
+                    <a className="resume" target="_blank" href="https://drive.google.com/file/d/1rRyM7Mev0CQDuzTF20C-HKxd1K8dmDue/view?usp=sharing"><FaFile size={"1.5em"} /></a>
+                    <a className="google" target="_blank" href="http://www.letmegooglethat.com/?q=Jatapiaro"><FaGoogle size={"1.3em"} /></a>
                     <hr className="my-2" />
                     <p>{this.state.data.jumbotron.readMore}</p>
                     <p className="lead">
@@ -98,7 +112,7 @@ Home.defaultProps = {
         jumbotron: {
             salutation: 'Hello world!',
             description: "I'm Jacobo, your next fullstack developer with knowledge of videogames, AR and a little bit of music technology.",
-            readMore: "I invite you to read more about me...so, just click on the button below.",
+            readMore: "If you want to know more than the links above, please click on the button below.",
             learnMore: "Learn More About Jacobo"
         },
         importantProjects: 'Important Projects',
@@ -145,7 +159,7 @@ Home.defaultProps = {
         jumbotron: {
             salutation: '¡Hola mundo!',
             description: "Soy Jacobo, tu próximo desarrollador full stack con conocimientos de videojuegos, RA, y un poco de tecnología musical.",
-            readMore: "Te invito a leer más acerca de mí...así que, da click en el botón de abajo.",
+            readMore: "Si quieres conocer algo más, además de los links de arriba, te invito a dar click en el botón que está aquí abajo.",
             learnMore: "Conoce Más Sobre Jacobo"
         },
         importantProjects: 'Proyectos Importantes',

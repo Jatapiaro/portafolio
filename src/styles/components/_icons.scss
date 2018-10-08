@@ -1,0 +1,40 @@
+.stack-overflow {
+    color: #fff;
+    &:hover {
+        color: $orange;   
+    }      
+}
+.google {
+    color: #fff;
+    &:hover {
+        color: #d62d20;         
+    }
+}
+.youtube {
+    color: #fff;
+    &:hover {
+        color: #c3352e;         
+    }
+
+}
+
+.github {
+    color: white;
+    &:hover {
+        color: $pink;
+    }
+}
+
+.bitbucket {
+    color: #fff;
+    &:hover {
+        color: $bitbucket-color;
+    } 
+}
+
+.resume {
+    color: #fff;
+    &:hover {
+        color: $geriatron-color;
+    }
+}

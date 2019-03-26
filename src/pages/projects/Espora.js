@@ -74,6 +74,16 @@ Espora.defaultProps = {
                 link: 'http://goalproject.co',
                 linkLabel: 'here'
             },
+            {
+                type: 'text-link',
+                data: 'OMEGA: a web app for a real-state agency. This help the sellers to keep track of the properties, their sales and their costumers. You can check the site ',
+                link: 'https://depas.sol.im/login',
+                linkLabel: 'here'
+            },
+            {
+                type: 'text',
+                data: 'Super-Ar-Location: An iOS Mobile app that uses AR Kit and Core Location to display different monuments of Mexico City.',
+            },
         ]
     },
     es: {
@@ -110,6 +120,16 @@ Espora.defaultProps = {
                 data: 'GOAL, una plataforma que pretende generar contenido así como aplicar evaluaciones a alumnos en la áreas de la administración, la estadística y la logística. Puedes checar la página ',
                 link: 'http://goalproject.co',
                 linkLabel: 'aquí'
+            },
+            {
+                type: 'text-link',
+                data: 'OMEGA: una aplicación web para una agencia inmobiliaria; con ella los vendedores pueden estar al tanto de las propiedades, sus ventas así como de sus clientes. Puedes ver la aplicación ',
+                link: 'https://depas.sol.im/login',
+                linkLabel: 'aquí'
+            },
+            {
+                type: 'text',
+                data: 'Super-Ar-Location: Una aplicación para iOS que muestra a los usuarios distintos monumentos de la Ciudad de México. Para ello hace uso de AR Kit + Core Location',
             },
         ]
     }

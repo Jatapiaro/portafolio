@@ -1,0 +1,18 @@
+.apple {
+    .project-introduction {
+        .my-container {
+            background-color: #fff !important;
+        }
+        .introduction {
+            background-color: #fff;
+            color: #000;
+            a {
+                color: #7D7D7D;
+                text-decoration: underline;
+                &:hover {
+                    color: #000;
+                }
+            }
+        }
+    }
+}

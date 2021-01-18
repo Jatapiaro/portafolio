@@ -68,5 +68,23 @@
     &:hover {
         color: $coco-game-color;
         background-color: #fff;
-    }    
+    }
+}
+
+.btn-apple {
+    background-color: #000;
+    color: #fff;
+    &:hover {
+        color: #000;
+        background-color: #fff;
+    }
+}
+
+.btn-espora {
+    background-color: #fff;
+    color: #000;
+    &:hover {
+        color: #fff;
+        background-color: #000;
+    }
 }

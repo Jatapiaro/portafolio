@@ -1,5 +1,5 @@
 import React from 'react';
-import { Jumbotron, Card, Button, CardTitle, CardText, CardBody, CardImg } from 'reactstrap';
+import { Jumbotron, Card, Button, CardTitle, CardText, CardBody, CardImg, CardFooter } from 'reactstrap';
 import { Redirect } from 'react-router-dom'
 import {
     FaGithub,
@@ -68,7 +68,7 @@ export default class Home extends React.Component {
                     <hr className="my-2" />
                     <p>{this.state.data.jumbotron.readMore}</p>
                     <p className="lead">
-                        <Button onClick={() => { this.redirectTo('/about-me') }} className="btn btn-round btn-meet-me">
+                        <Button onClick={() => { this.redirectTo('/work') }} className="btn btn-round btn-meet-me">
                             {this.state.data.jumbotron.learnMore}
                         </Button>
                     </p>
@@ -88,11 +88,8 @@ export default class Home extends React.Component {
                                 <CardBody>
                                     <CardTitle>{card.title}</CardTitle>
                                     <CardText>{card.description}</CardText>
-                                    <center>
-                                        <button 
-                                            type="button"
-                                            className={ "btn-round " + card.buttonClass }
-                                            onClick={() => { this.redirectTo(card.link) }}>
+                                    <center className={card.cardbBottomClass}>
+                                        <button className={"btn-round " + card.buttonClass} onClick={() => { this.redirectTo(card.link) }}>
                                             {card.button}
                                         </button>
                                     </center>
@@ -111,22 +108,43 @@ Home.defaultProps = {
     en: {
         jumbotron: {
             salutation: 'Hello world!',
-            description: "I'm Jacobo, your next fullstack developer with knowledge of videogames, AR and a little bit of music technology.",
+            description: "I'm Jacobo, a software engineer that loves MacOS development, web development, videogames and music technology.",
             readMore: "If you want to know more than the links above, please click on the button below.",
             learnMore: "Learn More About Jacobo"
         },
         importantProjects: 'Important Projects',
         importantProjectsCards: [
             {
+                title: 'Apple',
+                image: require('./../assets/pages/home/apple.jpg'),
+                description: 'My work in Safari for macOS',
+                button: ' Know more',
+                class: 'apple-card',
+                buttonClass: 'btn-apple',
+                cardbBottomClass: 'card-bottom-apple',
+                link: '/apple'
+            },
+            {
+                title: 'Espora Estudio',
+                image: require('./../assets/pages/works/espora-estudio.gif'),
+                description: 'Mi trabajo en Espora Estudio.',
+                button: 'Know more',
+                class: 'math-3d-card',
+                buttonClass: 'btn-espora',
+                cardbBottomClass: 'card-bottom-espora',
+                link: '/espora'
+            },
+            {
                 title: 'Santander Universidades',
                 image: require('./../assets/pages/home/santander-universidades.png'),
                 description: 'Development of the new Santander Universidades Mexico site.',
-                button: 'Learn About Santander Universidades',
+                button: 'Know more',
                 class: 'santander-red-card',
                 buttonClass: 'btn-santander-red',
+                cardbBottomClass: 'card-bottom-santander',
                 link: '/santander-universidades',
             },
-            {
+            /*{
                 title: 'Math-3D',
                 image: require('./../assets/pages/home/math-3d.jpg'),
                 description: 'Collaborator in a AR app for a Math book.',
@@ -152,28 +170,49 @@ Home.defaultProps = {
                 buttonClass: 'btn-geriatron',
                 class: 'geriatron-card',
                 link: '/geriatron',
-            }
+            }*/
         ]
     }, 
     es: {
         jumbotron: {
             salutation: '¡Hola mundo!',
-            description: "Soy Jacobo, tu próximo desarrollador full stack con conocimientos de videojuegos, RA, y un poco de tecnología musical.",
+            description: "Soy Jacobo, un ingeniero de software al que le gusta desarrollar para MacOS, web, videojuegos y tecnología musical.",
             readMore: "Si quieres conocer algo más, además de los links de arriba, te invito a dar click en el botón que está aquí abajo.",
             learnMore: "Conoce Más Sobre Jacobo"
         },
         importantProjects: 'Proyectos Importantes',
         importantProjectsCards: [
             {
+                title: 'Apple',
+                image: require('./../assets/pages/home/apple.jpg'),
+                description: 'Mi trabajo en Safari para MacOS',
+                button: ' Conoce más',
+                class: 'apple-card',
+                buttonClass: 'btn-apple',
+                cardbBottomClass: 'card-bottom-apple-es',
+                link: '/apple'
+            },
+            {
+                title: 'Espora Estudio',
+                image: require('./../assets/pages/works/espora-estudio.gif'),
+                description: 'My work at Espora Estudio.',
+                button: 'Conoce más',
+                class: 'math-3d-card',
+                buttonClass: 'btn-espora',
+                cardbBottomClass: 'card-bottom-espora',
+                link: '/espora'
+            },
+            {
                 title: 'Santander Universidades',
                 image: require('./../assets/pages/home/santander-universidades.png'),
                 description: 'Desarrollo del nuevo sitio de Santander Universidades México.',
-                button: 'Descubré Santander Universidades',
+                button: 'Conoce más',
                 buttonClass: 'btn-santander-red',
                 class: 'santander-red-card',
+                cardbBottomClass: 'card-bottom-santander',
                 link: '/santander-universidades',
             },
-            {
+            /*{
                 title: 'Math-3D',
                 image: require('./../assets/pages/home/math-3d.jpg'),
                 description: 'Colaborador en una app de RA para un libro de matemáticas.',
@@ -199,7 +238,7 @@ Home.defaultProps = {
                 buttonClass: 'btn-geriatron',
                 class: 'geriatron-card',
                 link: '/geriatron',
-            }
+            }*/
         ]
     }
 }

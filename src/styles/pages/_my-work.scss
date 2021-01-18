@@ -36,17 +36,47 @@
             margin-right: 15px;
             border-radius: 5%;
             background-color: #333;
+            .btn-round {
+                height: 47px !important;
+            }
             .card-text {
-                text-align: justify;
+                text-align: left;
             }
             .card-title {
                 text-align: center;
+            }
+            .card-bottom-apple {
+                padding-top: 80px;
+            }
+            .card-bottom-apple-es {
+                padding-top: 60px;
+            }
+            .card-bottom-espora {
+                padding-top: 80px;
+            }
+            .card-bottom-espora-es {
+                padding-top: 85px;
+            }
+            .card-bottom-math-iso {
+                padding-top: 20px;
+            }
+            .card-bottom-math-iso-es {
+                padding-top: 50px;
+            }
+            .card-bottom-geriatron {
+                padding-top: 30px;
+            }
+            .card-bottom-geriatron-es {
+                padding-top: 5px;
             }
             &.santander-red-card {
                 background-color: $santander-red;
             }
             &.math-3d-card {
                 background-color: black;
+                img {
+                    height: 180px;
+                }
             }
             &.exam-adapt-card {
                 background-color: $exam-adapt-color;
@@ -62,14 +92,6 @@
                     border-radius: 50%;
                     width: 180px;
                     height: 180px;
-                }
-            }
-            &.geriatron-card {
-                background-color: $geriatron-color;
-                img {
-                    width: 180px;
-                    height: 180px;
-                    border-radius: 50%;
                 }
             }
             &.iso-blade-card {
@@ -90,12 +112,33 @@
                     border-radius: 50%;
                 }
             }
-            &.coco-game-card {
-                background-color: $coco-game-color;
+            &.espora-card {
+                background-color: black;
+                img {
+                    height: 100px;
+                }
+            }
+            &.geriatron-card {
+                background-color: $geriatron-color;
                 img {
                     width: 180px;
                     height: 180px;
                     border-radius: 50%;
+                }
+            }
+            &.apple-card {
+                background-color: $white;
+                .card-text {
+                    color: #000;
+                    text-align: justify;
+                }
+                .card-title {
+                    color: #000;
+                    text-align: center;
+                }
+                img {
+                    width: 100px;
+                    height: 100px;
                 }
             }
         }

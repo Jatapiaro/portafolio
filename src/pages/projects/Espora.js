@@ -42,7 +42,7 @@ Espora.defaultProps = {
     en: {
         projectIntroduction: {
             title: "Espora Estudio",
-            introduction: "This is my current job",
+            introduction: "This was my job before Apple",
             link: undefined,
             linkLabel: 'here',
             image: require('./../../assets/pages/works/espora-estudio.gif')
@@ -89,7 +89,7 @@ Espora.defaultProps = {
     es: {
         projectIntroduction: {
             title: "Espora Estudio",
-            introduction: "Actualmente trabajo aquí",
+            introduction: "Mi trabajo antes de Apple",
             link: undefined,
             linkLabel: '',
             image: require('./../../assets/pages/works/espora-estudio.gif')

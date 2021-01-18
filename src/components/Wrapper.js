@@ -17,6 +17,7 @@ import Geriatron from '../pages/projects/Geriatron';
 import CocoGame from '../pages/projects/CocoGame';
 import IsoBlade from '../pages/projects/IsoBlade';
 import Espora from '../pages/projects/Espora';
+import Apple from '../pages/projects/Apple';
 
 export default class Wrapper extends React.Component {
 
@@ -71,6 +72,7 @@ export default class Wrapper extends React.Component {
                         <Route path="/coco-game" render={() => <CocoGame lang={this.state.lang} toggleNavbarClass={this.toggleNavbarClass} />} exact={true} />
                         <Route path="/iso-blade" render={() => <IsoBlade lang={this.state.lang} toggleNavbarClass={this.toggleNavbarClass} />} exact={true} />
                         <Route path="/espora" render={() => <Espora lang={this.state.lang} toggleNavbarClass={this.toggleNavbarClass} />} exact={true} />
+                        <Route path="/apple" render={() => <Apple lang={this.state.lang} toggleNavbarClass={this.toggleNavbarClass} />} exact={true} />
                     </div>
                 </BrowserRouter>
                 <Footer />

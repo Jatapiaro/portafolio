@@ -101,7 +101,7 @@ Works.defaultProps = {
     en: {
         jumbotron: {
             salutation: 'My Work',
-            description: "You can take a look to each of works.",
+            description: "You can take a look to each of my works.",
         },
         projects: 'My Projects',
         projectsCards: [

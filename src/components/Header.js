@@ -112,11 +112,6 @@ Header.defaultProps = {
     ],
     es: [
         {
-            text: 'Conóceme',
-            link: '/about-me',
-            type: 'link'
-        },
-        {
             text: 'Mi Trabajo',
             link: '/work',
             type: 'link'

@@ -7,7 +7,7 @@ import Footer from './Footer';
 
 import Home from './../pages/Home';
 import Contact from './../pages/Contact';
-import MeetMe from './../pages/MeetMe';
+// import MeetMe from './../pages/MeetMe';
 import Works from './../pages/Works';
 
 import SantanderUniversidades from './../pages/projects/SantanderUniversidades';
@@ -62,7 +62,7 @@ export default class Wrapper extends React.Component {
                 <BrowserRouter>
                     <div>
                         <Route path="/" render={() => <Home lang={this.state.lang} toggleNavbarClass={this.toggleNavbarClass} />} exact={true} />
-                        <Route path="/about-me" render={() => <MeetMe lang={this.state.lang} toggleNavbarClass={this.toggleNavbarClass} />} exact={true} />
+                        { /* <Route path="/about-me" render={() => <MeetMe lang={this.state.lang} toggleNavbarClass={this.toggleNavbarClass} />} exact={true} /> */ }
                         <Route path="/contact" render={() => <Contact lang={this.state.lang} toggleNavbarClass={this.toggleNavbarClass} />} exact={true} />
                         <Route path="/work" render={() => <Works lang={this.state.lang} toggleNavbarClass={this.toggleNavbarClass} />} exact={true} />
                         <Route path="/santander-universidades" render={() => <SantanderUniversidades lang={this.state.lang} toggleNavbarClass={this.toggleNavbarClass}/>} exact={true} />
